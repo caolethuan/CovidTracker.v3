@@ -201,6 +201,15 @@ initAllTimesChart = async () => {
             show: false
         },
         series: [],
+        dataLabels: {
+            enabled: true,
+            dropShadow: {
+                enabled: true,
+                left: 2,
+                top: 2,
+                opacity: 0.5
+            },
+          },
         xaxis: {
             categories: [],
             labels: {
