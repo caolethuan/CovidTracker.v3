@@ -192,6 +192,9 @@ initAllTimesChart = async () => {
             bar: {
                 columnWidth: '45%',
                 distributed: true,
+                dataLabels: {
+                    position: 'top'
+                  }
             }
         },
         dataLabels: {
@@ -205,11 +208,9 @@ initAllTimesChart = async () => {
             enabled: true,
             dropShadow: {
                 enabled: true,
-                left: 2,
-                top: 2,
-                opacity: 0.5
-            },
-          },
+                opacity: 1
+            }
+        },
         xaxis: {
             categories: [],
             labels: {
@@ -218,7 +219,7 @@ initAllTimesChart = async () => {
                     fontSize: '14px'
                 }
             }
-        }
+        },
     }
 
     all_time_chart = new ApexCharts(document.querySelector('#all-time-chart'), options)

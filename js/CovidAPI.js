@@ -1,10 +1,10 @@
 const covidApi = {
     getSummary: async () => {
         return await fetchRequest(covidApiEndPoints.summary())
-    },
-    getCountries: async () => {
-        return await fetchRequest(covidApiEndPoints.countries())
     }
+    // getCountries: async () => {
+    //     return await fetchRequest(covidApiEndPoints.countries())
+    // }
 }
 
 const covid_api_base = 'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/'
@@ -12,10 +12,10 @@ const covid_api_base = 'https://vaccovid-coronavirus-vaccine-and-treatment-track
 const covidApiEndPoints = {
     summary: () => {
         return getApiPath('')
-    },
-    countries: () => {
-        return getApiPath('countries')
     }
+    // countries: () => {
+    //     return getApiPath('countries')
+    // }
 }
 
 getApiPath = (end_point) => {
