@@ -146,7 +146,7 @@ loadSummary = async (country) => {
         showDeathsTotal(numberWithCommas(summary_country["TotalDeaths"]))
 
         //Load recover rate country
-        await loadRecoveryRate(Math.round(summary_country["Recovery_Proporation"]))
+        await loadRecoveryRate(Math.round(Number.parseInt(summary_country["TotalRecovered"]) / summary_country["TotalCases"] * 100))
     } else {
 
         showConfirmedTotal(numberWithCommas(summary["TotalCases"]))
@@ -154,7 +154,7 @@ loadSummary = async (country) => {
         showDeathsTotal(numberWithCommas(summary["TotalDeaths"]))
 
         //Load recover rate world
-        await loadRecoveryRate(Math.round(summary["Recovery_Proporation"]))
+        await loadRecoveryRate(Math.round(Number.parseInt(summary["TotalRecovered"]) /summary["TotalCases"] * 100))
     }
 
 
